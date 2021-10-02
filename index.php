@@ -91,7 +91,15 @@ require_once("layout/footer.php");
         } else if ($("#id_curso").val() == 'selecione') {
             $.alert({
                 title: 'Validação',
-                content: 'Preencha o campo Nome',
+                content: 'Preencha o campo Curso',
+            });
+
+            return false;
+
+        } else if ( ! isEmail($("#email").val())) {
+            $.alert({
+                title: 'Validação',
+                content: 'Digite um E-mail valido!',
             });
 
             return false;
