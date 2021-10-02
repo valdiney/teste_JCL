@@ -1,4 +1,10 @@
 <body>
+
+<center style="opacity:0.40;margin-top:40px;">
+  By Valdiney França <br>
+  Email: Valdiney.2@hotmail.com <br>
+  Github: <a href="https://github.com/valdiney/teste_JCL" target="_blank">valdiney.github</a>
+</center>
     
 <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"

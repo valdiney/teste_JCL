@@ -132,3 +132,5 @@ require_once("layout/footer.php");
     }
 </script>
 <?php require_once("modalFormularioAluno.php");?>
+<br>
+<br>
