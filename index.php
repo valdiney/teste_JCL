@@ -50,17 +50,23 @@ function aluno($pdo) {
             </tr>
         </thead>
         <tbody>
-            <?php foreach (alunos($pdo) as $aluno):?>
+            <?php if (count(alunos($pdo)) > 0):?>
+                <?php foreach (alunos($pdo) as $aluno):?>
+                    <tr>
+                        <td><?php echo $aluno->nome;?></td>
+                        <td><?php echo $aluno->email;?></td>
+                        <td><?php echo $aluno->curso;?></td>
+                        <td>
+                            <button class="btn btn-sm btn-primary" onclick="selecionarAluno('<?php echo $aluno->id;?>')"><i class="fas fa-edit"></i> Alterar</button>
+                            <button class="btn btn-sm btn-danger" onclick="deletar('<?php echo $aluno->id?>', $(this))"><i class="fas fa-minus-circle"></i> Deletar</button>
+                        </td>
+                    </tr>
+                <?php endforeach;?>
+            <?php else:?>
                 <tr>
-                    <td><?php echo $aluno->nome;?></td>
-                    <td><?php echo $aluno->email;?></td>
-                    <td><?php echo $aluno->curso;?></td>
-                    <td>
-                        <button class="btn btn-sm btn-primary" onclick="selecionarAluno('<?php echo $aluno->id;?>')"><i class="fas fa-edit"></i> Alterar</button>
-                        <button class="btn btn-sm btn-danger" onclick="deletar('<?php echo $aluno->id?>', $(this))"><i class="fas fa-minus-circle"></i> Deletar</button>
-                    </td>
+                    <td colspan="4" style="text-align:center">Nenhum aluno cadastrado ainda.</td>
                 </tr>
-            <?php endforeach;?>
+            <?php endif;?>
         </tbody>
     </table>
    </div>
