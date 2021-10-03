@@ -25,10 +25,6 @@ function cursos($pdo) {
     $query->execute();
     return $query->fetchAll(PDO::FETCH_OBJ);
 }
-
-function aluno($pdo) {
-
-}
 ?>
 <div class="container">
     <br>
