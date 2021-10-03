@@ -13,7 +13,8 @@
         <div class="row campos">
             <div class="col-md-6 form-group">
                 <label for="nome">Nome *</label>
-                <input type="text" class="form-control" id="nome" placeholder="Digite o Nome">
+                <input type="text" class="form-control" id="nome" placeholder="Digite o Nome"
+                onkeypress="return apenasLetras(event);"/>
             </div>
 
             <div class="col-md-6 form-group">
