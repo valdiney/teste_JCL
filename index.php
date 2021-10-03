@@ -44,7 +44,7 @@ function aluno($pdo) {
             <th scope="col">Curso</th>
             <th scope="col">
                 <button class="btn btn-sm btn-primary" onclick="modalNovoAluno()">
-                    <i class="fas fa-save"></i> Novo Aluno
+                    <i class="fas fa-plus"></i> Novo Aluno
                 </button>
             </th>
             </tr>
