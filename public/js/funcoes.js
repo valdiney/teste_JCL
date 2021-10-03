@@ -99,6 +99,13 @@ function selecionarAluno(idAluno) {
 function modalNovoAluno() {
     $("#modalFormularioAluno").modal().show();
     $("#idAluno").remove();
+    $("#nome, #email, #id_curso").val('');
+
+    $('#id_curso option').each(function() {
+        if ($(this).val() == 'selecione') {
+            $(this).prop("selected", true);
+        }
+    });
 }
 
 function isEmail(email) {
